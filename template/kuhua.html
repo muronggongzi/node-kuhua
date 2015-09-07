@@ -7,34 +7,34 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta content="telephone=no" name="format-detection" />
 <meta name="HandheldFriendly" content="true" />
-<title>[<%=comic_title%>] <%=ep_title%><%if(category){%>|<%=category%><%}%>-可米酷漫画</title>
-<meta name="keywords" content="[<%=comic_title%>],[<%=comic_title%>]{if:category},{category}{endif},条漫,可米酷漫画" />
-<meta name="description" content="《[<%=comic_title%>]》[<%=comic_title%>]|{if:category}{category}：{endif}{description}" />
+<title>[<%-comic_title%>] <%-ep_title%><%if(category){%>|<%-category%><%}%>-可米酷漫画</title>
+<meta name="keywords" content="<%-comic_title%>,<%-ep_title%><%if(category){%>,<%-category%><%}%>,条漫,可米酷漫画" />
+<meta name="description" content="《<%-comic_title%>》<%-ep_title%>|<%if(category){%><%-category%>：<%}%><%-description%>" />
 <link rel="stylesheet" href="http://m.comicool.cn/act/act-common/css/kuhua.css">
 <script src="http://m.comicool.cn/act/act-common/config.js"></script>
 <script>
-	var imgList = <%=ep_images%>;
-	var comic_id = <%=comic_id%>;
-	var ep_id = <%=ep_id%>;
+	var imgList = <%-ep_images%>;
+	var comic_id = <%-comic_id%>;
+	var ep_id = <%-ep_id%>;
 </script>
 </head>
 <body>
 	<h1 class="share-info" style="display:none">
-		[[<%=comic_title%>]] [<%=comic_title%>]{if:category}|{category}{endif}-可米酷漫画
-		<img src="{ep_cover}?imageView2/2/w/480" alt="[[<%=comic_title%>]] [<%=comic_title%>]|{if:category}{category}{else}可米酷漫画{endif}" />
+		[<%-comic_title%>] <%-ep_title%><%if(category){%>|<%-category%><%}%>-可米酷漫画
+		<img src="<%-ep_cover%>?imageView2/2/w/480" alt="[<%-comic_title%>] <%-ep_title%>|<%if(category){%><%-category%><%}else{%>可米酷漫画<%}%>" />
 	</h1>
 	<article class="share-page share-read">
 		<div class="tips hide">
-			<img src="http://cdn.icomicool.cn/m/content/images/tip.png" alt="{if:category}{category}{else}可米酷漫画{endif}" />
+			<img src="http://cdn.icomicool.cn/m/content/images/tip.png" alt="<%if(category){%><%-category%><%}else{%>可米酷漫画<%}%>" />
 		</div>
 		<header class="sr-head cl">
 			<div class="sr-head-con">
 				<a href="javascript:;" class="back-btn"></a>
 				<a href="javascript:;" class="share-btn"></a>
-				<span>[[<%=comic_title%>]] [<%=comic_title%>]</span>
+				<span>[<%-comic_title%>] <%-ep_title%></span>
 			</div>
 			<div class="sr-contip sr-bottomtip">
-				<img src="http://cdn.icomicool.cn/m/content/images/toptip.png" alt="{if:category}{category}{else}可米酷漫画{endif}" />
+				<img src="http://cdn.icomicool.cn/m/content/images/toptip.png" alt="<%if(category){%><%-category%><%}else{%>可米酷漫画<%}%>" />
 				<div class="toptip-btn">
 					<div class="toptip-btn-inner">
 						<span><a class="openLnk" href="javascript:;">立即打开</a></span>
@@ -54,12 +54,12 @@
 				</a>
 			</div>
 			<div class="sr-foot-inner">
-				{if:ep_prev_id}<a href="http://m.comicool.cn/content/reader.html?comic_id={comic_id}&ep_id={ep_prev_id}&ch=kh" class="prev-btn" title="上一话"></a>{else}<a class="prev-btn curr" title="没有了"></a>{endif}
-				<a href="http://m.comicool.cn/content/detail.html?comic_id={comic_id}&ft=1&ch=kh&tab=1" class="catalog-btn" title="目录"></a>
-				{if:ep_next_id}<a href="http://m.comicool.cn/content/reader.html?comic_id={comic_id}&ep_id={ep_next_id}&ch=kh" class="next-btn" title="下一话"></a>{else}<a class="next-btn curr" title="没有了"></a>{endif}
+				<%if(ep_prev_id){%><a href="http://m.comicool.cn/content/reader.html?comic_id=<%-comic_id%>&ep_id=<%-ep_prev_id%>&ch=kh" class="prev-btn" title="上一话"></a><%}else{%><a class="prev-btn curr" title="没有了"></a><%}%>
+				<a href="http://m.comicool.cn/content/detail.html?comic_id=<%-comic_id%>&ft=1&ch=kh&tab=1" class="catalog-btn" title="目录"></a>
+				<%if(ep_next_id){%><a href="http://m.comicool.cn/content/reader.html?comic_id=<%-comic_id%>&ep_id=<%-ep_next_id%>&ch=kh" class="next-btn" title="下一话"></a><%}else{%><a class="next-btn curr" title="没有了"></a><%}%>
 			</div>
 			<div class="sr-foot-img">
-				<img src="http://cdn.icomicool.cn/m/act/201506/kuhua/images/footer-img.jpg" alt="{if:category}{category}{else}可米酷漫画{endif}" />
+				<img src="http://cdn.icomicool.cn/m/act/201506/kuhua/images/footer-img.jpg?t=<%-timestamp%>" alt="<%if(category){%><%-category%><%}else{%>可米酷漫画<%}%>" />
 			</div>
 		</footer>
 	</article>
@@ -67,7 +67,7 @@
 		<span></span>
 		<div class="drop-inner">
 			<p><a href="http://m.comicool.cn/update.html">今日更新</a></p>
-			<p><a href="http://m.comicool.cn/content/detail.html?comic_id={comic_id}&ft=1&ch=kh&tab=0">漫画简介</a></p>
+			<p><a href="http://m.comicool.cn/content/detail.html?comic_id=<%-comic_id%>&ft=1&ch=kh&tab=0">漫画简介</a></p>
 		</div>
 	</div>
 	<div class="goto-top">

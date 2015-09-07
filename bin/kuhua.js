@@ -1,11 +1,12 @@
+#!/usr/bin/env node
 'use strict';
 var fs          = require('fs');
 var url         = require('url');
 var ejs         = require('ejs');
-var getPageData = require('./getPageData');
+var getPageData = require('../lib/getPageData');
 
 var beginTime   = Date.now();
-var templateUrl = 'kuhua.html';
+var templateUrl = __dirname + '/../template/kuhua.html';
 var logFile = 'kuhua_url.txt';
 var epArr = function () {
 	var args = process.argv.slice(2) || [];
