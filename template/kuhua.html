@@ -27,20 +27,15 @@
 		<div class="tips hide">
 			<img src="http://cdn.icomicool.cn/m/content/images/tip.png" alt="<%if(category){%><%-category%><%}else{%>可米酷漫画<%}%>" />
 		</div>
-		<header class="sr-head cl">
-			<div class="sr-head-con">
-				<a href="javascript:;" class="back-btn"></a>
-				<a href="javascript:;" class="share-btn"></a>
-				<span>[<%-comic_title%>] <%-ep_title%></span>
+		<header class="header">
+			<div class="header-t">
+				<a href="http://m.comicool.cn" class="logo" title="可米酷漫画">
+					<img src="http://cdn.icomicool.cn/m/act/act-common/images/kuhua/logo.png" alt="可米酷漫画">
+				</a>
+				<a href="javascript:;" class="header-comments">评论</a>
 			</div>
-			<div class="sr-contip sr-bottomtip">
-				<img src="http://cdn.icomicool.cn/m/content/images/toptip.png" alt="<%if(category){%><%-category%><%}else{%>可米酷漫画<%}%>" />
-				<div class="toptip-btn">
-					<div class="toptip-btn-inner">
-						<span><a class="openLnk" href="javascript:;">立即打开</a></span>
-						<span><a href="javascript:;" class="clo">×</a></span>
-					</div>
-				</div>
+			<div class="header-b">
+				<a href="http://m.comicool.cn/content/detail.html?comic_id=<%-comic_id%>&tab=0&ch=kh">[<%-comic_title%>] <%-ep_title%></a>
 			</div>
 		</header>
 		<section class="sr-con" id="sr-con">
@@ -59,7 +54,7 @@
 				<%if(ep_next_id){%><a href="http://m.comicool.cn/content/reader.html?comic_id=<%-comic_id%>&ep_id=<%-ep_next_id%>&ch=kh" class="next-btn" title="下一话"></a><%}else{%><a class="next-btn curr" title="没有了"></a><%}%>
 			</div>
 			<div class="sr-foot-img">
-				<img src="http://cdn.icomicool.cn/m/act/201506/kuhua/images/footer-img.jpg?t=<%-timestamp%>" alt="<%if(category){%><%-category%><%}else{%>可米酷漫画<%}%>" />
+				<img src="http://cdn.icomicool.cn/m/act/act-common/images/kuhua/footer-img.jpg?t=<%-timestamp%>" alt="<%if(category){%><%-category%><%}else{%>可米酷漫画<%}%>" />
 			</div>
 		</footer>
 	</article>
@@ -70,10 +65,7 @@
 			<p><a href="http://m.comicool.cn/content/detail.html?comic_id=<%-comic_id%>&ft=1&ch=kh&tab=0">漫画简介</a></p>
 		</div>
 	</div>
-	<div class="goto-top">
-		<i></i>
-		<p>TOP</p>
-	</div>
+	<a class="goto-home" href="http://m.comicool.cn" title="可米酷首页"></a>
 	<script>
 	    //百度统计代码安装
 	    var _hmt = _hmt || [];
