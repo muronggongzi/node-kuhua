@@ -10,7 +10,7 @@
 <title>[<%-comic_title%>] <%-ep_title%><%if(category){%>|<%-category%><%}%>-可米酷漫画</title>
 <meta name="keywords" content="<%-comic_title%>,<%-ep_title%><%if(category){%>,<%-category%><%}%>,条漫,可米酷漫画" />
 <meta name="description" content="《<%-comic_title%>》<%-ep_title%>|<%if(category){%><%-category%>：<%}%><%-description%>" />
-<link rel="stylesheet" href="http://m.comicool.cn/act/act-common/css/kuhua.css">
+<link rel="stylesheet" href="http://m.comicool.cn/act/act-common/css/kuhua-v2.css">
 <script src="http://m.comicool.cn/act/act-common/config.js"></script>
 <script>
 	var imgList = <%-ep_images%>;
@@ -30,9 +30,13 @@
 		<header class="header">
 			<div class="header-t">
 				<a href="http://m.comicool.cn" class="logo" title="可米酷漫画">
-					<img src="http://cdn.icomicool.cn/m/act/act-common/images/kuhua/logo.png" alt="可米酷漫画">
+					回首页
 				</a>
-				<a href="javascript:;" class="header-comments">评论</a>
+				<div class="header-t-r">
+					<a href="http://m.comicool.cn/login.html">登录</a>
+					<a href="http://m.comicool.cn/login.html">注册</a>
+					<a href="javascript:;" class="header-openapp">打开App</a>
+				</div>
 			</div>
 			<div class="header-b">
 				<a href="http://m.comicool.cn/content/detail.html?comic_id=<%-comic_id%>&tab=0&ch=kh">[<%-comic_title%>] <%-ep_title%></a>
@@ -58,14 +62,26 @@
 			</div>
 		</footer>
 	</article>
-	<div id="drop-tip" class="drop-tip">
-		<span></span>
-		<div class="drop-inner">
-			<p><a href="http://m.comicool.cn/update.html">今日更新</a></p>
-			<p><a href="http://m.comicool.cn/content/detail.html?comic_id=<%-comic_id%>&ft=1&ch=kh&tab=0">漫画简介</a></p>
-		</div>
+	<div class="goto-home">
+		<ul>
+			<li>
+				<a href="http://m.comicool.cn">官网首页</a>
+			</li>
+			<li>
+				<a href="http://m.comicool.cn/update.html">今日更新</a>
+			</li>
+			<li>
+				<a href="http://m.comicool.cn/content/detail.html?comic_id=<%-comic_id%>&ft=1&ch=kh&tab=0">漫画简介</a>
+			</li>
+			<li>
+				<a href="http://m.comicool.cn/search.html">漫画分类</a>
+			</li>
+		</ul>
 	</div>
-	<a class="goto-home" href="http://m.comicool.cn" title="可米酷首页"></a>
+	<div class="download-tip">
+		<a title="关闭" class="download-close"></a>
+		<a href="javascript:;" class="download-btn">下载App</a>
+	</div>
 	<script>
 	    //百度统计代码安装
 	    var _hmt = _hmt || [];
@@ -77,6 +93,6 @@
 	    })();
 	</script>
 	<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
-	<script src="http://m.comicool.cn/act/act-common/js/kuhua.js"></script>
+	<script src="http://m.comicool.cn/act/act-common/js/kuhua-v2.js"></script>
 </body>
 </html>
