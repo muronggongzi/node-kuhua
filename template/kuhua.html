@@ -17,6 +17,16 @@
 	var comic_id = <%-comic_id%>;
 	var ep_id = <%-ep_id%>;
 </script>
+<script>
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?91ce1b276d999b0757a6bf47b0e86df6";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>
 </head>
 <body>
 	<h1 class="share-info" style="display:none">
@@ -85,16 +95,6 @@
 		<a title="关闭" class="download-close"></a>
 		<a href="javascript:;" class="download-btn">下载App</a>
 	</div>
-	<script>
-	    //百度统计代码安装
-	    var _hmt = _hmt || [];
-	    (function() {
-	      var hm = document.createElement("script");
-	      hm.src = "//hm.baidu.com/hm.js?91ce1b276d999b0757a6bf47b0e86df6";
-	      var s = document.getElementsByTagName("script")[0]; 
-	      s.parentNode.insertBefore(hm, s);
-	    })();
-	</script>
 	<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
 	<script src="http://m.comicool.cn/act/act-common/js/kuhua-v2.js"></script>
 </body>
