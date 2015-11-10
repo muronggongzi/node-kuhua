@@ -70,7 +70,9 @@ function createLog(filename, pageData) {
 
 	if (epArr.progress === 1) {
 		logText = '******** 生成时间：' + getTime() + ' ********\n' + logText;
-	} else if (epArr.progress === epArr.length) {
+	}
+
+	if (epArr.progress === epArr.length) {
 		console.log('************');
 		console.log('共耗时：' + (Date.now() - beginTime) + 'ms');
 		logText += ('\n\n');
